@@ -80,9 +80,13 @@ h1, h2, h3 {
      a { color: var(--color-accent); 
      } 
 
-    /* ========================== 
-    4. LAYOUT 
-    ========================== */ 
+    /* ==========================
+   4. LAYOUT
+   Breakpoints used in this file:
+     768px  — tablet and larger
+   (CSS variables cannot be used inside @media conditions,
+    so breakpoints are documented here instead of tokenized.)
+   ========================== */
     body {
         max-width: var(--page-width);
         margin: 0 auto;
@@ -120,17 +124,16 @@ h1, h2, h3 {
                     } nav a:hover { color: var(--color-accent); 
                     } 
 
-                    .skills-grid {
+.skills-grid {
     list-style: none;
     padding-left: 0;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     gap: var(--space-md);
 }
 
 .skill-card {
-    flex: 1;
-    min-width: 12rem;
+   
     padding: var(--space-md);
     background-color: var(--color-surface-alt);
     border-radius: var(--radius-md);
@@ -152,7 +155,7 @@ h1, h2, h3 {
     flex-direction: column;
     gap: var(--space-lg);
 }
-.project-card {
+.project-card.featured {
     padding: var(--space-lg);
     background-color: var(--color-surface);
     border: 1px solid var(--color-border);
