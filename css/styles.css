@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:wght@400;700&display=swap');
 /* ==========================
    1. RESET
    ========================== */
@@ -23,7 +24,7 @@ img {
     --color-surface: #ffffff;
     --color-text: #1f2937;
     --color-muted: #6b7280;
-    --color-accent: #0369a1;
+    --color-accent: #4338ca;
     --color-surface-alt: #f1f5f9;
 
     /* Spacing — a modular scale */
@@ -33,7 +34,8 @@ img {
     --space-xl: 2rem;
 
     /* Typography */
-    --font-stack: system-ui, 'Segoe UI', Tahoma, sans-serif;
+    --font-stack: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-serif: 'Lora', Georgia, serif;
     --text-base: 1rem;
     --text-h3: 1.25rem;
     --text-h2: 1.5rem;
@@ -62,9 +64,22 @@ body {
     font-family: var(--font-stack);
 }
 
-h1 { font-size: var(--text-h1); line-height: var(--leading-heading); }
-h2 { font-size: var(--text-h2); line-height: var(--leading-heading); }
-h3 { font-size: var(--text-h3); line-height: var(--leading-heading); }
+h1 {
+    font-size: var(--text-h1);
+}
+
+h2 {
+    font-size: var(--text-h2);
+}
+
+h3 {
+    font-size: var(--text-h3);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-serif);
+    line-height: var(--leading-heading);
+}
 
 h1, h2, h3 {
      margin-bottom: var(--space-sm);
@@ -117,14 +132,16 @@ h1, h2, h3 {
         min-width: 16rem;
         } 
                      
-                    nav { 
-                        padding: var(--space-md) 0;
-                     } 
-                     nav a { 
-                        color: var(--color-text); 
-                        text-decoration: none; 
-                         
-                    } nav a:hover { color: var(--color-accent); 
+        nav { 
+            padding: var(--space-md) 0;
+             } 
+        nav a {
+        color: var(--color-text);
+        text-decoration: none;
+        transition: color 0.2s;
+}
+                    
+                    nav a:hover { color: var(--color-accent); 
                     } 
 
 .skills-grid {
